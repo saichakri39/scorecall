@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', 'Noto Sans Telugu', 'Noto Sans Devanagari', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #EFE9DB;
+    background-image: 
+      radial-gradient(#D6CDBC 1px, transparent 1px),
+      radial-gradient(#D6CDBC 1px, #EFE9DB 1px);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+    color: #191C18;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans Telugu', 'Noto Sans Devanagari', sans-serif;
+}
+
+/* Stencil flex-banner and painted wall visual language */
+.painted-wall-bg {
+  background-color: #EFE9DB;
+  background-image: radial-gradient(rgba(25, 28, 24, 0.08) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+.chalk-border {
+  border: 2px solid #191C18;
+  box-shadow: 2px 2px 0px #191C18;
+}
+
+.chalk-border-thick {
+  border: 3px solid #191C18;
+  box-shadow: 4px 4px 0px #191C18;
+}
+
+/* Irregular angled cut for flex tournament look */
+.flex-stencil-panel {
+  border: 3px solid #191C18;
+  clip-path: polygon(
+    0% 0%, 
+    calc(100% - 10px) 0%, 
+    100% 10px, 
+    100% 100%, 
+    10px 100%, 
+    0% calc(100% - 10px)
+  );
+}
+
+.flex-badge {
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+}
+
+.tape-red-shadow {
+  box-shadow: 3px 3px 0px #8F170C;
+}
+
+.press-action {
+  transition: transform 0.06s ease, box-shadow 0.06s ease;
+}
+
+.press-action:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #191C18 !important;
+}
+
+
