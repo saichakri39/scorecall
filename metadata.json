@@ -1,0 +1,6 @@
+{
+  "name": "Scorecall — Voice Gully Cricket Scorer",
+  "description": "Voice-first gully cricket ball-by-ball scorer built for bright sunlight, one-handed street play, local rules, and Telugu/Hindi/English speech.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

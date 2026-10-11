@@ -1,0 +1,10 @@
+ScoreCall fixes applied
+
+1. VoiceInputBar.tsx: ignores duplicate SpeechRecognition onresult events after one result has been submitted in a listening session. This helps prevent one spoken delivery from being counted multiple times.
+2. server.ts: handles Gemini 503/429/provider-unavailable errors as temporary parsing failures and returns an empty fallback response so the browser can use its offline speech matcher without noisy parse-error logs.
+3. Dependency versions from the supplied project were retained, including esbuild ^0.28.0.
+
+Important:
+- This patch could not be built/tested in the provided Linux runtime because the ZIP's node_modules executables have Windows permissions (tsx: Permission denied). Reinstall dependencies on Windows using `npm install` before running.
+- The app's offline parser already recognizes basic commands such as 4, 6, and wicket. If the displayed score still resets after this patch, please share a short screen recording or console output; that behavior needs to be traced in the live app because the scoring engine derives totals from its ball history.
+- Do not include .env or API keys when sharing the project ZIP.
